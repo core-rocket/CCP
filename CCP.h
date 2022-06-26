@@ -14,14 +14,20 @@
 #define CCP_A_state 0x019
 #define CCP_B_control 0x01A
 #define CCP_B_state 0x01B
+#define CCP_C_control 0x01C
+#define CCP_C_state 0x01D
 
 #define CCP_camera_control 0x024
 #define CCP_camera_state 0x025
 
 #define CCP_A_flash_control 0x028
 #define CCP_A_flash_state 0x029
-#define CCP_B_flash_control 0x030
-#define CCP_B_flash_state 0x031
+#define CCP_B_flash_control 0x02A
+#define CCP_B_flash_state 0x02B
+#define CCP_C_flash_control 0x02C
+#define CCP_C_flash_state 0x02D
+#define CCP_D_flash_control 0x02E
+#define CCP_D_flash_state 0x02F
 
 // uint32_t
 #define CCP_lift_off_time_ms 0x410
@@ -31,6 +37,14 @@
 #define CCP_A_GNSS_longitude_udeg 0x421
 #define CCP_A_GNSS_altitude_mm 0x422
 #define CCP_A_GNSS_time_ms 0x423
+#define CCP_B_GNSS_latitude_udeg 0x424
+#define CCP_B_GNSS_longitude_udeg 0x425
+#define CCP_B_GNSS_altitude_mm 0x426
+#define CCP_B_GNSS_time_ms 0x427
+#define CCP_C_GNSS_latitude_udeg 0x428
+#define CCP_C_GNSS_longitude_udeg 0x429
+#define CCP_C_GNSS_altitude_mm 0x42A
+#define CCP_C_GNSS_time_ms 0x42B
 
 // uint16_t
 
@@ -42,13 +56,20 @@
 #define CCP_A_temperature_C 0x622
 #define CCP_A_humidity_percent 0x623
 
+#define CCP_A_differential_pressure_Pa 0x628
+#define CCP_A_airspeed_ms 0x629
+
+#define CCP_voltage_main_V 0x62C
+
 #define CCP_B_pressure_altitude_m 0x630
 #define CCP_B_pressure_hPa 0x631
 #define CCP_B_temperature_C 0x632
 #define CCP_B_humidity_percent 0x633
 
-#define CCP_voltage_main 0x62C
-#define CCP_voltage_actuator 0x63C
+#define CCP_voltage_actuator_V 0x63C
+
+#define CCP_voltage_valve_V 0x63E
+#define CCP_voltage_drain_V 0x63F
 
 // fp16
 #define CCP_A_accel_mss 0x720
