@@ -133,7 +133,7 @@ switch (CCP.id) {
 
 ## 依存関係
 ### MCP2515
-[MCP_CAN_lib](https://github.com/coryjfowler/MCP_CAN_lib)
+* [MCP_CAN_lib](https://github.com/coryjfowler/MCP_CAN_lib)
 ### W25Q512
-[W25Q512](https://github.com/771-8bit/W25Q512)
-[Arduino-Queue.h](https://github.com/sdesalas/Arduino-Queue.h)
+* [W25Q512](https://github.com/771-8bit/W25Q512)
+* [Arduino-Queue.h](https://github.com/sdesalas/Arduino-Queue.h)
