@@ -16,6 +16,10 @@
 #define CCP_B_state 0x01B
 #define CCP_C_control 0x01C
 #define CCP_C_state 0x01D
+#define CCP_D_control 0x01E
+#define CCP_D_state 0x01F
+#define CCP_E_control 0x020
+#define CCP_E_state 0x021
 
 #define CCP_camera_control 0x024
 #define CCP_camera_state 0x025
