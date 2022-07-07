@@ -54,6 +54,7 @@
 
 // float
 #define CCP_open_time_s 0x610
+#define CCP_open_time_repeat_s 0x611
 
 #define CCP_A_pressure_altitude_m 0x620
 #define CCP_A_pressure_hPa 0x621
