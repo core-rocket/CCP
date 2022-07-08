@@ -83,6 +83,7 @@
 #define CCP_A_euler_rad 0x726
 
 #define CCP_B_accel_mss 0x730
+#define CCP_B_accel_G_cancel_mss 0x731
 #define CCP_B_gyro_rads 0x732
 #define CCP_B_mag_uT 0x734
 #define CCP_B_euler_rad 0x736
