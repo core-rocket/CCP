@@ -172,8 +172,8 @@ public:
     float data_fp16_0(), data_fp16_1(), data_fp16_2();
 
     // floating point processing
-    void float_to_fp16(byte fp16[2], float data_fp16);
-    float fp16_to_float(byte fp16[2]);
+    static void float_to_fp16(byte fp16[2], float data_fp16);
+    static float fp16_to_float(byte fp16[2]);
 };
 
 #endif
