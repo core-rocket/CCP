@@ -76,7 +76,6 @@
 #define CCP_B_temperature_C 0x632
 #define CCP_B_humidity_percent 0x633
 
-#define CCP_A_pito_pressure_altitude_m 0x638
 
 #define CCP_voltage_actuator_V 0x63C
 
