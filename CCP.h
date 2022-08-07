@@ -62,6 +62,7 @@
 #define CCP_A_pressure_hPa 0x621
 #define CCP_A_temperature_C 0x622
 #define CCP_A_humidity_percent 0x623
+#define CCP_A_chamber_pressure_V 0x624
 
 #define CCP_A_differential_pressure_Pa 0x628
 #define CCP_A_airspeed_ms 0x629
@@ -82,6 +83,10 @@
 #define CCP_voltage_valve_V 0x63E
 #define CCP_voltage_drain_V 0x63F
 
+#define CCP_C_pressure_altitude_m 0x640
+#define CCP_C_pressure_hPa 0x641
+#define CCP_C_temperature_C 0x642
+#define CCP_C_humidity_percent 0x643
 
 // fp16
 #define CCP_A_accel_mss 0x720
