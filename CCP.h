@@ -34,6 +34,8 @@
 #define CCP_C_flash_state 0x02D
 #define CCP_D_flash_control 0x02E
 #define CCP_D_flash_state 0x02F
+#define CCP_E_flash_control 0x030
+#define CCP_E_flash_state 0x031
 
 // uint32_t
 #define CCP_lift_off_time_ms 0x410
@@ -88,8 +90,19 @@
 #define CCP_C_temperature_C 0x642
 #define CCP_C_humidity_percent 0x643
 
+#define CCP_D_pressure_altitude_m 0x650
+#define CCP_D_pressure_hPa 0x651
+#define CCP_D_temperature_C 0x652
+#define CCP_D_humidity_percent 0x653
+
+#define CCP_E_pressure_altitude_m 0x660
+#define CCP_E_pressure_hPa 0x661
+#define CCP_E_temperature_C 0x662
+#define CCP_E_humidity_percent 0x663
+
 // fp16
 #define CCP_A_accel_mss 0x720
+#define CCP_A_accel_G_cancel_mss 0x721
 #define CCP_A_gyro_rads 0x722
 #define CCP_A_mag_uT 0x724
 #define CCP_A_euler_rad 0x726
@@ -101,9 +114,22 @@
 #define CCP_B_euler_rad 0x736
 
 #define CCP_C_accel_mss 0x740
+#define CCP_C_accel_G_cancel_mss 0x741
 #define CCP_C_gyro_rads 0x742
 #define CCP_C_mag_uT 0x744
 #define CCP_C_euler_rad 0x746
+
+#define CCP_D_accel_mss 0x750
+#define CCP_D_accel_G_cancel_mss 0x751
+#define CCP_D_gyro_rads 0x752
+#define CCP_D_mag_uT 0x754
+#define CCP_D_euler_rad 0x756
+
+#define CCP_E_accel_mss 0x760
+#define CCP_E_accel_G_cancel_mss 0x761
+#define CCP_E_gyro_rads 0x762
+#define CCP_E_mag_uT 0x764
+#define CCP_E_euler_rad 0x766
 
 #include "Arduino.h"
 
