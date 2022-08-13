@@ -88,6 +88,7 @@
 
 #define CCP_C_differential_pressure_Pa 0x648
 #define CCP_C_airspeed_ms 0x649
+#define CCP_C_differential_pressure_raw_V 0x64A
 
 #define CCP_D_pressure_altitude_m 0x650
 #define CCP_D_pressure_hPa 0x651
