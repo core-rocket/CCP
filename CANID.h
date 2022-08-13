@@ -77,7 +77,7 @@
 #define CCP_B_humidity_percent 0x633
 
 #define CCP_voltage_actuator_V 0x63C
-
+#define CCP_current_actuator_mA 0x63D
 #define CCP_voltage_valve_V 0x63E
 #define CCP_voltage_drain_V 0x63F
 
