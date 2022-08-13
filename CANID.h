@@ -100,6 +100,10 @@
 #define CCP_E_temperature_C 0x662
 #define CCP_E_humidity_percent 0x663
 
+#define CCP_F_precise_accel_x_mss 0x674
+#define CCP_F_precise_accel_y_mss 0x675
+#define CCP_F_precise_accel_z_mss 0x676
+#define CCP_F_precise_accel_mss 0x677
 
 // fp16
 #define CCP_A_accel_mss 0x720
