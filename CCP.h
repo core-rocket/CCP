@@ -1,74 +1,10 @@
 #ifndef CCP_H
 #define CCP_H
 
-// char
-#define CCP_parachute_fuse 0x008
-#define CCP_parachute_control 0x009
-#define CCP_lift_off_judge 0x00A
-#define CCP_open_judge 0x00B
-#define CCP_opener_control 0x00C
-#define CCP_opener_state 0x00D
-#define CCP_opener_source 0x00E
-
-#define CCP_A_control 0x018
-#define CCP_A_state 0x019
-#define CCP_B_control 0x01A
-#define CCP_B_state 0x01B
-
-#define CCP_camera_control 0x024
-#define CCP_camera_state 0x025
-
-#define CCP_A_flash_control 0x028
-#define CCP_A_flash_state 0x029
-#define CCP_B_flash_control 0x030
-#define CCP_B_flash_state 0x031
-
-// uint32_t
-#define CCP_lift_off_time_ms 0x410
-#define CCP_open_time_ms 0x411
-
-#define CCP_A_GNSS_latitude_udeg 0x420
-#define CCP_A_GNSS_longitude_udeg 0x421
-#define CCP_A_GNSS_altitude_mm 0x422
-#define CCP_A_GNSS_time_ms 0x423
-
-// uint16_t
-
-// float
-#define CCP_open_time_s 0x610
-
-#define CCP_A_pressure_altitude_m 0x620
-#define CCP_A_pressure_hPa 0x621
-#define CCP_A_temperature_C 0x622
-#define CCP_A_humidity_percent 0x623
-
-#define CCP_B_pressure_altitude_m 0x630
-#define CCP_B_pressure_hPa 0x631
-#define CCP_B_temperature_C 0x632
-#define CCP_B_humidity_percent 0x633
-
-#define CCP_voltage_main 0x62C
-#define CCP_voltage_actuator 0x63C
-
-// fp16
-#define CCP_A_accel_mss 0x720
-#define CCP_A_gyro_rads 0x722
-#define CCP_A_mag_uT 0x724
-#define CCP_A_euler_rad 0x726
-
-#define CCP_B_accel_mss 0x730
-#define CCP_B_gyro_rads 0x732
-#define CCP_B_mag_uT 0x734
-#define CCP_B_euler_rad 0x736
-
-#define CCP_C_accel_mss 0x740
-#define CCP_C_gyro_rads 0x742
-#define CCP_C_mag_uT 0x744
-#define CCP_C_euler_rad 0x746
-
+#include "CANID.h"
 #include "Arduino.h"
 
-    typedef struct
+typedef struct
 {
     uint16_t time16;
     char string[6];
@@ -143,8 +79,8 @@ public:
     float data_fp16_0(), data_fp16_1(), data_fp16_2();
 
     // floating point processing
-    void float_to_fp16(byte fp16[2], float data_fp16);
-    float fp16_to_float(byte fp16[2]);
+    static void float_to_fp16(byte fp16[2], float data_fp16);
+    static float fp16_to_float(byte fp16[2]);
 };
 
 #endif
