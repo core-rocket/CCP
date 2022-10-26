@@ -53,7 +53,7 @@
 #define CCP_C_GNSS_latitude_udeg 0x428
 #define CCP_C_GNSS_longitude_udeg 0x429
 #define CCP_C_GNSS_altitude_mm 0x42A
-#define CCP_C_GNSS_time_ms 0x42B
+#define CCP_buzzer_ring_reserveation_ms 0x42B
 
 
 // uint16_t
