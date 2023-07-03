@@ -14,7 +14,7 @@ CAN通信はController Area Networkの略で、もとは自動車内の通信用
 	- 使う部品が変わっても通信規格を軸にして技術継承が可能である
 
 # CCP (CORE CAN Protocol)
-標準フォーマットのCANでは、11bitのIDをつけて最大8byteのデータをやりとりできます。どのIDにどんなデータをどんな形式で流すかを定義したものがCORE CAN Protocolです。IDの割り当ては`CANID.xlsx`で管理しています。
+標準フォーマットのCANでは、11bitのIDをつけて最大8byteのデータをやりとりできます。どのIDにどんなデータをどんな形式で流すかを定義したものがCORE CAN Protocolです。IDの割り当ては`CANID.xlsx`で管理しています。CCPではIDが1byteに収まるように0x00～0xFFを使用します．
 <table>
 	<tr>
 		<td>CANID</td>
@@ -22,51 +22,25 @@ CAN通信はController Area Networkの略で、もとは自動車内の通信用
 		<td>用途</td>
 	</tr>
 	<tr>
-		<td>0x000~</td>
+		<td>0x00~</td>
 		<td>秒(uint16_t)</td>
 		<td colspan="3">文字列(6文字)</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>0x100~</td>
-		<td>秒(uint16_t)</td>
-		<td colspan="3">文字列(6文字)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>0x200~</td>
-		<td>秒(uint16_t)</td>
-		<td colspan="3">文字列(6文字)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>0x300~</td>
-		<td>秒(uint16_t)</td>
-		<td colspan="3">文字列(6文字)</td>
-		<td></td>
-	</tr>
-	<tr>
-		<td>0x400~</td>
+		<td>0x40~</td>
 		<td colspan="2">ミリ秒(unsigned long)</td>
 		<td colspan="2">uint32_t</td>
 		<td>有効数字が7桁では足りないもの。GPSなどで使用。</td>
 	</tr>
 	<tr>
-		<td>0x500~</td>
-		<td>秒(uint16_t)</td>
-		<td>uitn16_t</td>
-		<td>uitn16_t</td>
-		<td>uitn16_t</td>
-		<td>基本使わない。</td>
-	</tr>
-	<tr>
-		<td>0x600~</td>
+		<td>0x80~</td>
 		<td colspan="2">ミリ秒(unsigned long)</td>
 		<td colspan="2">float</td>
 		<td>基本はこれ。有効数字は10進数で7桁程度。</td>
 	</tr>
 	<tr>
-		<td>0x700~</td>
+		<td>0xC0~</td>
 		<td>秒(uint16_t)</td>
 		<td>fp16</td>
 		<td>fp16</td>
@@ -121,10 +95,10 @@ switch (CCP.id) {
 		if (CCP.str_match("CHECK", 5)) goCHECK();
 		if (CCP.str_match("READY", 5)) goREADY();
 		break;
-	case CCP_open_time_s:
+	case CCP_open_time_command_s:
 		open_threshold_time_ms = CCP.data_float() * 1000;
 		delay(200);
-		CCP.float_to_device(CCP_open_time_s, (float)open_threshold_time_ms / 1000.0);
+		CCP.float_to_device(CCP_open_time_response_s, (float)open_threshold_time_ms / 1000.0);
 		break;
 	default:
 		break;

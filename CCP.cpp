@@ -2,19 +2,15 @@
 #include "CCP.h"
 
 /*
-    if (id < 0x400)
+    if (id < 0x40)
     {
         // string
     }
-    else if (id < 0x500)
+    else if (id < 0x80)
     {
         // uint32
     }
-    else if (id < 0x600)
-    {
-        // uint16
-    }
-    else if (id < 0x700)
+    else if (id < 0xC0)
     {
         // float
     }
