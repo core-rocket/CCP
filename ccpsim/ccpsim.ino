@@ -7,7 +7,7 @@
 
 CCP_MCP2515 CCP(CAN0_CS, CAN0_INT);
 char buffer[8];
-union { float f; int32_t i; } f_bits;
+union { float f; uint32_t i; } f_bits;
 
 void setup() {
   Serial.begin(9600);
@@ -26,7 +26,7 @@ void loop() {
 
   f_bits = {0};
   for (int i = 4; i < 8; i++) {
-    f_bits.i |= (int32_t)buffer[i] << (i - 4) * 8;
+    f_bits.i |= (uint32_t)buffer[i] << (i - 4) * 8;
   }
 
   switch (buffer[3]) {
