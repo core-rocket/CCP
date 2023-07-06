@@ -45,6 +45,8 @@
 #define CCP_open_time_command_s 0x080
 #define CCP_open_time_response_s 0x081
 
+#define CCP_meltend_time_s 0x083
+
 #define CCP_A_pressure_altitude_m 0x090
 #define CCP_A_pressure_hPa 0x091
 #define CCP_A_temperature_C 0x092
