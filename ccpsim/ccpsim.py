@@ -11,6 +11,9 @@ import enum
 import struct
 
 
+METHIONINE = b'AUG'
+
+
 class SimType(enum.Enum):
     ACC = b'a'
     ALT = b'b'
@@ -24,6 +27,7 @@ class SimData:
 
 
 def send_data(serial: Serial, data: SimData) -> None:
+    serial.write(METHIONINE)
     serial.write(data.ty.value)
     serial.write(bytearray(struct.pack('<f', data.value)))
 
@@ -56,5 +60,5 @@ def main(port: str, baudrate: int, acc: str, alt: str) -> None:
         simulate(serial, data)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     Fire(main)
