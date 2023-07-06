@@ -28,7 +28,7 @@ def send_data(serial: Serial, data: SimData) -> None:
     serial.write(bytearray(struct.pack('<f', data.value)))
 
 
-def simulate(serial, data: List[SimData]) -> None:
+def simulate(serial: Serial, data: List[SimData]) -> None:
     loop = asyncio.get_event_loop()
     max_time = max([d.time for d in data]) + 1000
     loop.call_later(max_time/1000, loop.stop)
