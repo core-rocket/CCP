@@ -4,8 +4,8 @@
 
 * PC側（`ccpsim.py`）
   * shebangはnix-shell用になってるので適宜変更してね
-  * 依存関係は[Python Fire][python-fire]と[pySerial][pyserial]
-  * こんな感じで使う: `./ccpsim.py /dev/ttyACM0 9600 ./acc.csv ./alt.csv`
+  * 依存関係は[click][click]と[pyserial-asyncio][pyserial-asyncio]
+  * こんな感じで使う: `./ccpsim.py --port /dev/ttyACM1 --baudrate 9600 --acc ./sample_csv/acc.csv --alt ./sample_csv/alt.csv`
 * Arduino側（`ccpsim.ino`）
   * Arduino IDE等で書き込んでね
 
@@ -31,5 +31,5 @@ CCP.fp16_to_device(CCP_A_accel_mss, 0,0,accel_mss);
 CCP.float_to_device(CCP_A_pressure_altitude_m, accel_mss);
 ```
 
-[python-fire]: https://github.com/google/python-fire
-[pyserial]: https://github.com/pyserial/pyserial
+[click]: https://github.com/pallets/click/
+[pyserial-asyncio]: https://github.com/pyserial/pyserial-asyncio
