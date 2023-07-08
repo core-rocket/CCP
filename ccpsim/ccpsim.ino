@@ -3,7 +3,7 @@
 #define CAN0_INT        1
 #define CAN0_CS         0
 #define METHIONINE      "AUG"
-#define ERR_START_CODON "ERR_START_CODON"
+#define ERR_START_CODON "E01"
 
 CCP_MCP2515 CCP(CAN0_CS, CAN0_INT);
 char buffer[8];
