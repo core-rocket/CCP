@@ -31,6 +31,7 @@ class SimData:
 
 class SimErrorType(enum.Enum):
     StartCodon = b'E01'
+    SimType = b'E02'
 
 
 class SimError(Exception):
@@ -43,6 +44,7 @@ class SimError(Exception):
 
 class SimProtocol(Protocol):
     MAGIC_METHIONINE = b'AUG'
+    MAGIC_AMBER = b'UAG'
 
     loop: AbstractEventLoop
     transport: Optional[BaseTransport]
@@ -64,8 +66,12 @@ class SimProtocol(Protocol):
     # def resume_writing(self) -> None:
 
     def data_received(self, data: bytes) -> None:
+        # TODO
         if data.strip() == SimErrorType.StartCodon.value:
             raise SimError(SimErrorType.StartCodon)
+        if data.strip() == SimErrorType.SimType.value:
+            raise SimError(SimErrorType.SimType)
+        print(data.decode('ascii'), end=None)
 
     # def eof_received(self) -> bool | None:
 
@@ -76,8 +82,12 @@ class SimProtocol(Protocol):
             self.transport.write(bytearray(struct.pack('<f', data.value)))
 
     def __simulate(self) -> None:
+        self.transport.write(self.MAGIC_AMBER)
+        self.transport.write(len(self.data).to_bytes(4, 'little'))
+
         max_time = max([d.time for d in self.data]) + 1000
         self.loop.call_later(max_time/1000, self.loop.stop)
+
         for data in self.data:
             self.loop.call_later(data.time/1000, self.__send_data, data)
 
