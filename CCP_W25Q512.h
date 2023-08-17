@@ -29,6 +29,8 @@ public:
     // 0x3FFFFFF;
     Queue<uint8_t> flashbuf = Queue<uint8_t>(1024);
 
+    uint32_t flash_time = 0;
+
 protected:
     uint8_t _csPin;
     uint8_t _CAN0_INT;
