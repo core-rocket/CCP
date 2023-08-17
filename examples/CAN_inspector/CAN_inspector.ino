@@ -6,8 +6,8 @@
 
 // #define NC0         0
 // #define NC1         1
-#define CAN0_INT 2
-#define CAN0_CS 3
+#define CAN0_INT 1
+#define CAN0_CS 0
 // #define SSD1331_cs  4
 // #define SSD1331_dc  5
 // #define SSD1331_rst 6
