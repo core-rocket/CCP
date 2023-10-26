@@ -8,24 +8,32 @@ int CCP_W25Q512::begin()
 void CCP_W25Q512::read_device()
 {
     //Serial.println(flash_addr);
-    byte rdata[10];
-    W25Q512::read(flash_addr, rdata, 10);
-    flash_addr += 10;
-    if (flash_addr % 256 >= 250)
+    byte rdata[14];
+    W25Q512::read(flash_addr, rdata, 14);
+    flash_addr += 14;
+    if (flash_addr % 256 >= 252)
     {
         flash_addr += 256 - (flash_addr % 256);
     }
-    id = (((long unsigned int)rdata[0]) << 8) + ((long unsigned int)rdata[1]);
+    flash_time = (((long unsigned int)rdata[0]) << 24) + (((long unsigned int)rdata[1]) << 16) + (((long unsigned int)rdata[2]) << 8) + ((long unsigned int)rdata[3]);
+    id = (((long unsigned int)rdata[4]) << 8) + ((long unsigned int)rdata[5]);
     for (int i_msg = 0; i_msg < 8; i_msg++)
     {
-        msg.msg_byte[i_msg] = rdata[i_msg + 2];
+        msg.msg_byte[i_msg] = rdata[i_msg + 6];
     }
 }
 
 byte CCP_W25Q512::write_device()
 {
+    flash_time = millis();
+    flashbuf.push(((uint8_t)(flash_time >> 24) & 0xFF));
+    flashbuf.push(((uint8_t)(flash_time >> 16) & 0xFF));
+    flashbuf.push(((uint8_t)(flash_time >> 8) & 0xFF));
+    flashbuf.push((uint8_t)(flash_time & 0xFF));
+
     flashbuf.push(((uint8_t)(id >> 8) & 0xFF));
     flashbuf.push((uint8_t)(id & 0xFF));
+    
     for (uint8_t i = 0; i < 8; i++)
     {
         flashbuf.push(msg.msg_byte[i]);
@@ -50,12 +58,12 @@ void CCP_W25Q512::flash_buf()
         SPI.transfer(flash_addr & 0xff);
         while (flashbuf.count() > 0 && digitalRead(_CAN0_INT))
         {
-            for (uint8_t i_can_mes = 0; i_can_mes < 10; i_can_mes++)
+            for (uint8_t i_can_mes = 0; i_can_mes < 14; i_can_mes++)
             {
                 SPI.transfer(flashbuf.pop());
                 flash_addr++;
             }
-            if (flash_addr % 256 >= 250)
+            if (flash_addr % 256 >= 252)
             {
                 flash_addr += 256 - (flash_addr % 256);
                 break;
