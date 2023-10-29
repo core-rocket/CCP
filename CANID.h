@@ -25,16 +25,17 @@
 #define CCP_GNSS_time_ms 0x047
 
 // float
-#define CCP_difpressure_hPa 0x080
-#define CCP_difpressure_voltage_V 0x081
+#define CCP_pressure_altitude_m 0x080
+#define CCP_pressure_hPa 0x081
+#define CCP_temperature_C 0x082
+#define CCP_difpressure_hPa 0x083
+#define CCP_difpressure_voltage_V 0x084
+
 
 // fp16
 #define CCP_accel_mss 0x0C0
 #define CCP_gyro_rads 0x0C1
 #define CCP_mag_uT 0x0C2
 #define CCP_euler_rad 0x0C3
-#define CCP_pressure_altitude_m 0x0C4
-#define CCP_pressure_hPa 0x0C5
-#define CCP_temperature_C 0x0C6
 
 #endif
