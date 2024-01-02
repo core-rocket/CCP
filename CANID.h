@@ -3,6 +3,7 @@
 
 // char
 #define CCP_EMST_mesure 0x001
+#define CCP_nose_status 0x010
 
 // uint32_t
 #define CCP_nose_temperature 0x040
