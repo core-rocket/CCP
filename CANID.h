@@ -3,12 +3,12 @@
 
 // char
 #define CCP_nose_status 0x002
-#define CCP_surface_pressure1_status 0x003
-#define CCP_surface_pressure2_status 0x004
-#define CCP_surface_pressure3_status 0x005
-#define CCP_surface_pressure4_status 0x006
-#define CCP_surface_pressure5_status 0x007
-#define CCP_surface_pressure6_status 0x008
+#define CCP_nose_surface_pressure1_status 0x003
+#define CCP_nose_surface_pressure2_status 0x004
+#define CCP_nose_surface_pressure3_status 0x005
+#define CCP_nose_surface_pressure4_status 0x006
+#define CCP_nose_surface_pressure5_status 0x007
+#define CCP_nose_surface_pressure6_status 0x008
 
 #define CCP_nose_adc 0x00A
 
