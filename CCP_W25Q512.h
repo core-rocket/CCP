@@ -4,7 +4,6 @@
 #include "Arduino.h"
 
 #include <CCP.h>
-#include <W25Q512.h>
 
 #include "Queue.h"
 // https://rb-station.com/blogs/article/arduino-queue
