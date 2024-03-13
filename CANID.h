@@ -15,7 +15,6 @@
 // uint32_t
 #define CCP_nose_temperature 0x040
 #define CCP_nose_barometic_pressure 0x041
-#define CCP_nose_adc 0x042
 
 // float
 #define CCP_nose_temperature 0x080
