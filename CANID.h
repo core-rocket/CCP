@@ -25,6 +25,8 @@
 #define CCP_surface_pressure4_pressure_pa 0x08D
 #define CCP_surface_pressure5_pressure_pa 0x08E
 #define CCP_surface_pressure6_pressure_pa 0x08F
+#define CCP_surface_pressure7_pressure_pa 0x090
+#define CCP_surface_pressure8_pressure_pa 0x091
 
 #endif
 
