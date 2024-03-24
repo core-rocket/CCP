@@ -19,14 +19,14 @@
 #define CCP_nose_barometic_pressure 0x081
 #define CCP_nose_voltage 0x082
 
-#define CCP_surface_pressure1_pressure_pa 0x08A
-#define CCP_surface_pressure2_pressure_pa 0x08B
-#define CCP_surface_pressure3_pressure_pa 0x08C
-#define CCP_surface_pressure4_pressure_pa 0x08D
-#define CCP_surface_pressure5_pressure_pa 0x08E
-#define CCP_surface_pressure6_pressure_pa 0x08F
-#define CCP_surface_pressure7_pressure_pa 0x090
-#define CCP_surface_pressure8_pressure_pa 0x091
+#define CCP_surface_pressure1_pressure_hPa 0x08A
+#define CCP_surface_pressure2_pressure_hPa 0x08B
+#define CCP_surface_pressure3_pressure_hPa 0x08C
+#define CCP_surface_pressure4_pressure_hPa 0x08D
+#define CCP_surface_pressure5_pressure_hPa 0x08E
+#define CCP_surface_pressure6_pressure_hPa 0x08F
+#define CCP_surface_pressure7_pressure_hPa 0x090
+#define CCP_surface_pressure8_pressure_hPa 0x091
 
 #endif
 
