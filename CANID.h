@@ -2,14 +2,21 @@
 #define CANID_H
 
 // char
-#define CCP_parachute_fuse 0x008
-#define CCP_parachute_control 0x009
-#define CCP_lift_off_judge 0x00A
-#define CCP_open_judge 0x00B
-#define CCP_opener_control 0x00C
-#define CCP_opener_state 0x00D
-#define CCP_opener_source 0x00E
-#define CCP_nose_status 0x00F
+#define CCP_parachute_fuse 0x001
+#define CCP_parachute_control 0x002
+#define CCP_lift_off_judge 0x003
+#define CCP_open_judge 0x004
+#define CCP_opener_control 0x005
+#define CCP_opener_state 0x006
+#define CCP_opener_source 0x007
+#define CCP_A_flash_control 0x008
+#define CCP_A_flash_state 0x009
+#define CCP_B_flash_control 0x00A
+#define CCP_B_flash_state 0x00B
+#define CCP_C_flash_control 0x00C
+#define CCP_C_flash_state 0x00D
+#define CCP_sensor_control 0x00E
+
 
 #define CCP_surface_pressure1_status 0x108
 #define CCP_surface_pressure2_status 0x109
