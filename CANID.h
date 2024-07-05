@@ -15,7 +15,7 @@
 // uint32_t
 
 // float
-#define CCP_nose_temperature 0x080
+#define CPP_A_pressure_altitude_m 0x080
 #define CCP_nose_barometic_pressure 0x081
 #define CCP_nose_voltage 0x082
 
