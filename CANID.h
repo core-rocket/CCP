@@ -23,7 +23,7 @@
 // uint32_t
 
 // float
-#define CPP_A_pressure_hPa 0x080
+#define CCP_A_pressure_hPa 0x080
 #define CCP_A_temperature_C 0x081
 #define CCP_A_humidity_percent 0x082
 #define CCP_A_altitude_m 0x083
