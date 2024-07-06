@@ -28,17 +28,29 @@
 #define CCP_nose_adc 0x11A
 
 // uint32_t
+#define CCP_lift_off_time_ms 0x040
+#define CCP_open_time_ms 0x041
+#define CCP_open_time_s 0x042
+#define CCP_open_time_repeat_s 0x043
+#define CCP_A_GNSS_latitude_udeg 0x044
+#define CCP_A_GNSS_longitude_udeg 0x045
+#define CCP_A_GNSS_altitude_mm 0x046
+#define CCP_A_GNSS_time_ms 0x047
+#define CCP_B_GNSS_latitude_udeg 0x048
+#define CCP_B_GNSS_longitude_udeg 0x049
+#define CCP_B_GNSS_altitude_mm 0x04A
+#define CCP_B_GNSS_time_ms 0x04B
+
 
 // float
-#define CCP_A_pressure_hPa 0x080
-#define CCP_A_temperature_C 0x081
-#define CCP_A_humidity_percent 0x082
-#define CCP_A_altitude_m 0x083
-
-#define CPP_B_pressure_altitude_m 0x086
+#define CCP_difpressure_hPa 0x080
+#define CCP_difpressure_voltage_V 0x081
+#define CCP_A_pressure_altitude_m 0x082
+#define CCP_A_pressure_hPa 0x083
+#define CCP_A_temperature_C 0x084
+#define CCP_B_pressure_altitude_m 0x085
+#define CCP_B_pressure_hPa 0x086
 #define CCP_B_temperature_C 0x087
-#define CCP_B_humidity_percent 0x088
-#define CCP_B_altitude_m 0x089
 
 #define CCP_surface_pressure1_pressure_hPa 0x08A
 #define CCP_surface_pressure2_pressure_hPa 0x08B
@@ -50,17 +62,17 @@
 #define CCP_surface_pressure8_pressure_hPa 0x091
 
 // fp16
-#define CCP_A_accel_mss 0x720
-#define CCP_A_gyro_rads 0x721
-#define CCP_A_mag_uT 0x722
-#define CCP_A_euler_rad 0x723
-#define CCP_A_magnetic_Am 0x724
-#define CCP_A_gravity_mss 0x725
+#define CCP_A_accel_mss 0x0C0
+#define CCP_A_gyro_rads 0x0C1
+#define CCP_A_mag_uT 0x0C2
+#define CCP_A_euler_rad 0x0C3
+#define CCP_A_magnetic_Am 0x0C
+#define CCP_A_gravity_mss 0x0C
 
-#define CCP_B_accel_mss 0x730
-#define CCP_B_gyro_rads 0x731
-#define CCP_B_mag_uT 0x732
-#define CCP_B_euler_rad 0x733
+#define CCP_B_accel_mss 0x0C4
+#define CCP_B_gyro_rads 0x0C5
+#define CCP_B_mag_uT 0x0C6
+#define CCP_B_euler_rad 0x0C7
 #define CCP_B_magnetic_Am 0x734
 #define CCP_B_gravity_mss 0x735
 
