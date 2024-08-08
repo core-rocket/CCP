@@ -5,7 +5,7 @@
 #define CCP_parachute_fuse 0x001
 #define CCP_parachute_control 0x002
 #define CCP_lift_off_judge 0x003
-#define CCP_open_judge 0x004
+#define CCP_key_state 0x004
 #define CCP_opener_control 0x005
 #define CCP_opener_state 0x006
 #define CCP_opener_source 0x007
