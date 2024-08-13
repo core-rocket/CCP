@@ -40,6 +40,7 @@
 #define CCP_B_GNSS_longitude_udeg 0x049
 #define CCP_B_GNSS_altitude_mm 0x04A
 #define CCP_B_GNSS_time_ms 0x04B
+#define CCP_downlink 0x04C
 
 
 // float
