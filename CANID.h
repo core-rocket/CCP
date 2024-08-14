@@ -64,6 +64,12 @@
 #define CCP_surface_pressure7_pressure_hPa 0x090
 #define CCP_surface_pressure8_pressure_hPa 0x091
 
+#define CCP_nose_pressure_hPa 0x092
+#define CCP_nose_temperature_C 0x093
+#define CCP_nose_humidity_percent 0x094
+#define CCP_nose_altitude_m 0x095
+#define CCP_nose_gas_KOhms 0x096
+
 // fp16
 #define CCP_A_accel_mss 0x0C0
 #define CCP_A_gyro_rads 0x0C1
