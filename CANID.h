@@ -69,6 +69,9 @@
 #define CCP_nose_humidity_percent 0x094
 #define CCP_nose_altitude_m 0x095
 #define CCP_nose_gas_KOhms 0x096
+#define CCP_nose_voltage 0x097
+#define CCP_nose_outputkPa 0x098
+#define CCP_nose_outputmmH2O 0x099
 
 // fp16
 #define CCP_A_accel_mss 0x0C0
