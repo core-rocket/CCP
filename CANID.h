@@ -52,10 +52,6 @@
 #define CCP_A_humidity_percent 0x085
 #define CCP_A_altitude_m 0x086
 
-#define CCP_B_altitude_m 0x087
-#define CCP_B_pressure_hPa 0x088
-#define CCP_B_temperature_C 0x089
-
 #define CCP_surface_pressure1_pressure_hPa 0x08A
 #define CCP_surface_pressure2_pressure_hPa 0x08B
 #define CCP_surface_pressure3_pressure_hPa 0x08C
@@ -74,6 +70,11 @@
 #define CCP_nose_outputkPa 0x098
 #define CCP_nose_outputmmH2O 0x099
 
+#define CCP_B_altitude_m 0x0A0
+#define CCP_B_pressure_hPa 0x0A1
+#define CCP_B_temperature_C 0x0A2
+#define CCP_B_humidity_percent 0x0A3
+
 // fp16
 #define CCP_A_accel_mss 0x0C0
 #define CCP_A_gyro_rads 0x0C1
@@ -88,6 +89,7 @@
 #define CCP_B_euler_rad 0x0C7
 #define CCP_B_magnetic_Am 0x734
 #define CCP_B_gravity_mss 0x735
+
 
 
 #endif
