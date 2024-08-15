@@ -51,7 +51,8 @@
 #define CCP_A_temperature_C 0x084
 #define CCP_A_humidity_percent 0x085
 #define CCP_A_altitude_m 0x086
-#define CCP_B_pressure_altitude_m 0x087
+
+#define CCP_B_altitude_m 0x087
 #define CCP_B_pressure_hPa 0x088
 #define CCP_B_temperature_C 0x089
 
