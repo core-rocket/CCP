@@ -75,6 +75,8 @@
 #define CCP_B_temperature_C 0x0A2
 #define CCP_B_humidity_percent 0x0A3
 
+#define CCP_toptime_s 0x0A4
+
 // fp16
 #define CCP_A_accel_mss 0x0C0
 #define CCP_A_gyro_rads 0x0C1
