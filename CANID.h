@@ -35,6 +35,8 @@
 #define CCP_B_pressure_altitude_m 0x087
 #define CCP_B_pressure_hPa 0x088
 #define CCP_B_temperature_C 0x089
+#define CCP_B_humidity_percent 0x090
+#define CCP_B_gas_Kohms 0x091
 
 // fp16
 #define CCP_A_accel_mss 0x0C0
